@@ -142,6 +142,57 @@ function Index() {
         </div>
       </section>
 
+      {/* QUEER STORIES ON FILM */}
+      <section className="px-6 md:px-10 py-24 md:py-32 border-t border-border bg-card/40">
+        <div className="grid md:grid-cols-12 gap-8 md:gap-12 items-start">
+          <div className="md:col-span-4">
+            <p className="label-mono text-ember mb-6">
+              <span className="stamp text-ember">In development</span>
+            </p>
+            <p className="label-mono text-bone/70">A new chapter / 2025—</p>
+          </div>
+
+          <div className="md:col-span-8">
+            <h2 className="font-display text-bone text-5xl md:text-8xl leading-[0.9] mb-8">
+              Queer stories,<br />
+              <em className="not-italic">
+                <span className="underline-rough">on film.</span>
+              </em>
+            </h2>
+            <div className="space-y-5 text-bone/90 text-lg md:text-xl leading-relaxed max-w-2xl">
+              <p>
+                I'm building a concept — and possibly a small production company — dedicated to
+                <span className="text-ember"> queer narratives in cinema</span>. Stories told from
+                the inside, made by the people who live them.
+              </p>
+              <p>
+                The plan: develop, produce and champion shorts, series and features that put
+                queer experience at the centre — not as subplot, not as metaphor, just as life.
+                Sensitive, specific, formally curious work.
+              </p>
+              <p className="text-bone/70">
+                If this overlaps with what you're making — as writer, performer, producer or funder —
+                I'd love to talk.
+              </p>
+            </div>
+            <div className="mt-10 flex flex-wrap gap-4">
+              <Link
+                to="/contact"
+                className="label-mono text-background bg-ember px-6 py-4 hover:bg-amber transition-colors"
+              >
+                Get in touch →
+              </Link>
+              <Link
+                to="/about"
+                className="label-mono text-bone border border-border px-6 py-4 hover:bg-card transition-colors"
+              >
+                More about me →
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* INTRO STRIP */}
       <section className="px-6 md:px-10 py-24 md:py-32 border-t border-border">
         <div className="grid md:grid-cols-12 gap-8">

@@ -132,10 +132,7 @@ function Services() {
               ].join(" ")}
             >
               <div className="col-span-2 md:col-span-1">
-                <span
-                  className="font-display text-ember text-5xl md:text-7xl inline-block"
-                  style={{ transform: `rotate(${i % 2 === 0 ? "-3deg" : "3deg"})` }}
-                >
+                <span className="font-display text-ember text-5xl md:text-7xl inline-block">
                   {s.no}
                 </span>
               </div>
@@ -202,11 +199,10 @@ function Services() {
               t: "Hand over",
               d: "Delivery in the formats you need — masters, social cuts, prints, RAW. Revisions until it lands.",
             },
-          ].map((step, i) => (
+          ].map((step) => (
             <div
               key={step.n}
               className="relative bg-card p-6 md:p-8 border border-border"
-              style={{ transform: `rotate(${i === 1 ? "0.4deg" : i === 0 ? "-0.6deg" : "0.5deg"})` }}
             >
               <span className="font-display text-ember text-4xl md:text-5xl block mb-4">
                 {step.n}
