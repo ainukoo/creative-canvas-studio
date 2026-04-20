@@ -59,8 +59,8 @@ function Index() {
 
           <div className="animate-fade-up" style={{ animationDelay: "0.2s", opacity: 0, animationFillMode: "forwards" }}>
             <h1 className="font-display text-bone leading-[0.85] text-[clamp(3rem,12vw,11rem)]">
-              Ainu<br />
-              <em className="not-italic text-ember">Kyrönseppä</em>
+              <span className="inline-block" style={{ transform: "rotate(-1deg)" }}>Ainu</span><br />
+              <em className="not-italic text-ember inline-block" style={{ transform: "rotate(1deg)" }}>Kyrönseppä</em>
             </h1>
           </div>
 
@@ -93,10 +93,10 @@ function Index() {
       <section className="px-6 md:px-10 py-24 md:py-32">
         <div className="flex justify-between items-end mb-12 md:mb-20">
           <div>
-            <p className="label-mono text-ember mb-4">Selected works</p>
+            <p className="label-mono text-ember mb-4"><span className="stamp">Selected works</span></p>
             <h2 className="font-display text-bone text-5xl md:text-7xl leading-none">
               Some<br />
-              <em className="not-italic text-muted-foreground">recent frames.</em>
+              <em className="not-italic text-muted-foreground"><span className="underline-rough">recent frames.</span></em>
             </h2>
           </div>
           <Link

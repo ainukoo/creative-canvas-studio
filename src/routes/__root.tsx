@@ -73,12 +73,13 @@ function RootShell({ children }: { children: React.ReactNode }) {
 
 function RootComponent() {
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="min-h-screen bg-background text-foreground relative">
       <SiteHeader />
       <main>
         <Outlet />
       </main>
       <SiteFooter />
+      <div className="grain-overlay" aria-hidden="true" />
     </div>
   );
 }
