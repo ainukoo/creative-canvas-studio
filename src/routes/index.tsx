@@ -59,8 +59,8 @@ function Index() {
 
           <div className="animate-fade-up" style={{ animationDelay: "0.2s", opacity: 0, animationFillMode: "forwards" }}>
             <h1 className="font-display text-bone leading-[0.85] text-[clamp(3rem,12vw,11rem)]">
-              <span className="inline-block" style={{ transform: "rotate(-1deg)" }}>Ainu</span><br />
-              <em className="not-italic text-ember inline-block" style={{ transform: "rotate(1deg)" }}>Kyrönseppä</em>
+              <span className="inline-block">Ainu</span><br />
+              <em className="not-italic text-ember inline-block">Kyrönseppä</em>
             </h1>
           </div>
 
