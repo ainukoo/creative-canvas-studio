@@ -1,28 +1,19 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { Helmet } from "react-helmet-async";
 import { projects } from "@/lib/projects";
 
-export const Route = createFileRoute("/work")({
-  head: () => ({
-    meta: [
-      { title: "Work — Ainu Kyrönseppä" },
-      {
-        name: "description",
-        content:
-          "Selected films, photography and performance works by Ainu Kyrönseppä — directing, screenwriting, editing.",
-      },
-      { property: "og:title", content: "Work — Ainu Kyrönseppä" },
-      {
-        property: "og:description",
-        content: "Films, photography and performance — 2020—2025.",
-      },
-    ],
-  }),
-  component: Work,
-});
-
-function Work() {
+export default function Work() {
   return (
     <>
+      <Helmet>
+        <title>Work — Ainu Kyrönseppä</title>
+        <meta
+          name="description"
+          content="Selected films, photography and performance works by Ainu Kyrönseppä — directing, screenwriting, editing."
+        />
+        <meta property="og:title" content="Work — Ainu Kyrönseppä" />
+        <meta property="og:description" content="Films, photography and performance — 2020—2025." />
+      </Helmet>
+
       <section className="px-6 md:px-10 pt-32 md:pt-40 pb-12">
         <p className="label-mono text-ember mb-6">Index 01 / Filmography</p>
         <h1 className="font-display text-bone text-6xl md:text-[10rem] leading-[0.85]">
@@ -61,7 +52,6 @@ function Work() {
                   </span>
                 </div>
 
-                {/* hover image preview */}
                 <div className="absolute right-32 top-1/2 -translate-y-1/2 w-72 aspect-[4/3] opacity-0 group-hover:opacity-100 scale-90 group-hover:scale-100 transition-all duration-500 pointer-events-none hidden lg:block z-0 shadow-cinematic">
                   <img
                     src={p.image}
@@ -76,7 +66,6 @@ function Work() {
         </ul>
       </section>
 
-      {/* GRID */}
       <section className="px-6 md:px-10 pb-32">
         <p className="label-mono text-ember mb-8">Index 02 / Stills</p>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">

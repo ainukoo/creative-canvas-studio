@@ -1,25 +1,20 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import portrait from "@/assets/portrait.jpg";
 
-export const Route = createFileRoute("/about")({
-  head: () => ({
-    meta: [
-      { title: "About — Ainu Kyrönseppä" },
-      {
-        name: "description",
-        content:
-          "About Ainu Kyrönseppä — non-binary filmmaker, performer and activist working between film, performance and climate communication.",
-      },
-      { property: "og:title", content: "About — Ainu Kyrönseppä" },
-      { property: "og:description", content: "Filmmaker, performer, activist — Helsinki." },
-    ],
-  }),
-  component: About,
-});
-
-function About() {
+export default function About() {
   return (
     <>
+      <Helmet>
+        <title>About — Ainu Kyrönseppä</title>
+        <meta
+          name="description"
+          content="About Ainu Kyrönseppä — non-binary filmmaker, performer and activist working between film, performance and climate communication."
+        />
+        <meta property="og:title" content="About — Ainu Kyrönseppä" />
+        <meta property="og:description" content="Filmmaker, performer, activist — Helsinki." />
+      </Helmet>
+
       <section className="px-6 md:px-10 pt-32 md:pt-40 pb-16">
         <p className="label-mono text-ember mb-6">Index 03 / Bio</p>
         <h1 className="font-display text-bone text-6xl md:text-[10rem] leading-[0.85]">

@@ -1,19 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
-
-export const Route = createFileRoute("/cv")({
-  head: () => ({
-    meta: [
-      { title: "CV — Ainu Kyrönseppä" },
-      {
-        name: "description",
-        content:
-          "Curriculum vitae of Ainu Kyrönseppä — selected works, exhibitions, roles and credits.",
-      },
-      { property: "og:title", content: "CV — Ainu Kyrönseppä" },
-    ],
-  }),
-  component: CV,
-});
+import { Helmet } from "react-helmet-async";
 
 type Entry = {
   year: string;
@@ -78,9 +63,18 @@ function Section({ title, entries }: { title: string; entries: Entry[] }) {
   );
 }
 
-function CV() {
+export default function CV() {
   return (
     <>
+      <Helmet>
+        <title>CV — Ainu Kyrönseppä</title>
+        <meta
+          name="description"
+          content="Curriculum vitae of Ainu Kyrönseppä — selected works, exhibitions, roles and credits."
+        />
+        <meta property="og:title" content="CV — Ainu Kyrönseppä" />
+      </Helmet>
+
       <section className="px-6 md:px-10 pt-32 md:pt-40 pb-12">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
           <div>

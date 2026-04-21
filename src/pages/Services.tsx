@@ -1,23 +1,5 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
-
-export const Route = createFileRoute("/services")({
-  head: () => ({
-    meta: [
-      { title: "Services — Ainu Kyrönseppä" },
-      {
-        name: "description",
-        content:
-          "Services offered by Ainu Kyrönseppä — event photography, video editing, marketing, scriptwriting, directing and more.",
-      },
-      { property: "og:title", content: "Services — Ainu Kyrönseppä" },
-      {
-        property: "og:description",
-        content: "Event photography, video editing, scriptwriting, directing & marketing.",
-      },
-    ],
-  }),
-  component: Services,
-});
+import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 type Service = {
   no: string;
@@ -97,9 +79,22 @@ const services: Service[] = [
   },
 ];
 
-function Services() {
+export default function Services() {
   return (
     <>
+      <Helmet>
+        <title>Services — Ainu Kyrönseppä</title>
+        <meta
+          name="description"
+          content="Services offered by Ainu Kyrönseppä — event photography, video editing, marketing, scriptwriting, directing and more."
+        />
+        <meta property="og:title" content="Services — Ainu Kyrönseppä" />
+        <meta
+          property="og:description"
+          content="Event photography, video editing, scriptwriting, directing & marketing."
+        />
+      </Helmet>
+
       <section className="px-6 md:px-10 pt-32 md:pt-40 pb-12 relative">
         <p className="label-mono text-ember mb-6">
           <span className="stamp text-ember">Services</span>
@@ -174,7 +169,6 @@ function Services() {
         <div className="scratch-divider" />
       </div>
 
-      {/* Process / how it works */}
       <section className="px-6 md:px-10 py-20 md:py-32">
         <p className="label-mono text-ember mb-6">How it usually goes</p>
         <h2 className="font-display text-bone text-4xl md:text-7xl leading-none mb-12 md:mb-16">
@@ -214,7 +208,6 @@ function Services() {
         </div>
       </section>
 
-      {/* CTA */}
       <section className="px-6 md:px-10 pb-24">
         <div className="relative bg-gradient-ember p-10 md:p-16 overflow-hidden edge-rough-b">
           <div className="absolute inset-0 bg-gradient-vignette opacity-50" />

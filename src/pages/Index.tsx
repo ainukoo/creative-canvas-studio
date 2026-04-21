@@ -1,21 +1,7 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import heroImg from "@/assets/hero-cinematic.jpg";
 import { projects } from "@/lib/projects";
-
-export const Route = createFileRoute("/")({
-  head: () => ({
-    meta: [
-      { title: "Ainu Kyrönseppä — Filmmaker, Director, Editor" },
-      {
-        name: "description",
-        content:
-          "A growing toolbox — directing, screenwriting, photography and editing by Ainu Kyrönseppä.",
-      },
-      { property: "og:title", content: "Ainu Kyrönseppä — A Growing Toolbox" },
-    ],
-  }),
-  component: Index,
-});
 
 const marqueeRoles = [
   "Director",
@@ -28,11 +14,20 @@ const marqueeRoles = [
   "Activist",
 ];
 
-function Index() {
+export default function Index() {
   const featured = projects.slice(0, 4);
 
   return (
     <>
+      <Helmet>
+        <title>Ainu Kyrönseppä — Filmmaker, Director, Editor</title>
+        <meta
+          name="description"
+          content="A growing toolbox — directing, screenwriting, photography and editing by Ainu Kyrönseppä."
+        />
+        <meta property="og:title" content="Ainu Kyrönseppä — A Growing Toolbox" />
+      </Helmet>
+
       {/* HERO */}
       <section className="relative h-[100svh] w-full overflow-hidden">
         <img
@@ -45,7 +40,6 @@ function Index() {
         <div className="absolute inset-0 bg-gradient-fade" />
         <div className="absolute inset-0 bg-gradient-vignette" />
 
-        {/* letterbox bars */}
         <div className="absolute top-0 left-0 right-0 h-[8vh] bg-background z-10" />
         <div className="absolute bottom-0 left-0 right-0 h-[8vh] bg-background z-10" />
 
