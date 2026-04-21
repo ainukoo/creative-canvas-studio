@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Helmet } from "react-helmet-async";
+import { SEO } from "@/components/SEO";
 
 type Service = {
   no: string;

@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet-async";
+import { SEO } from "@/components/SEO";
 
 type Entry = {
   year: string;

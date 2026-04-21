@@ -1,18 +1,15 @@
-import { Helmet } from "react-helmet-async";
+import { SEO } from "@/components/SEO";
 import { projects } from "@/lib/projects";
 
 export default function Work() {
   return (
     <>
-      <Helmet>
-        <title>Work — Ainu Kyrönseppä</title>
-        <meta
-          name="description"
-          content="Selected films, photography and performance works by Ainu Kyrönseppä — directing, screenwriting, editing."
-        />
-        <meta property="og:title" content="Work — Ainu Kyrönseppä" />
-        <meta property="og:description" content="Films, photography and performance — 2020—2025." />
-      </Helmet>
+      <SEO
+        title="Work — Ainu Kyrönseppä"
+        description="Selected films, photography and performance works by Ainu Kyrönseppä — directing, screenwriting, editing."
+        ogTitle="Work — Ainu Kyrönseppä"
+        ogDescription="Films, photography and performance — 2020—2025."
+      />
 
       <section className="px-6 md:px-10 pt-32 md:pt-40 pb-12">
         <p className="label-mono text-ember mb-6">Index 01 / Filmography</p>

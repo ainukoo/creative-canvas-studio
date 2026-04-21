@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Helmet } from "react-helmet-async";
+import { SEO } from "@/components/SEO";
 import heroImg from "@/assets/hero-cinematic.jpg";
 import { projects } from "@/lib/projects";
 
@@ -19,14 +19,11 @@ export default function Index() {
 
   return (
     <>
-      <Helmet>
-        <title>Ainu Kyrönseppä — Filmmaker, Director, Editor</title>
-        <meta
-          name="description"
-          content="A growing toolbox — directing, screenwriting, photography and editing by Ainu Kyrönseppä."
-        />
-        <meta property="og:title" content="Ainu Kyrönseppä — A Growing Toolbox" />
-      </Helmet>
+      <SEO
+        title="Ainu Kyrönseppä — Filmmaker, Director, Editor"
+        description="A growing toolbox — directing, screenwriting, photography and editing by Ainu Kyrönseppä."
+        ogTitle="Ainu Kyrönseppä — A Growing Toolbox"
+      />
 
       {/* HERO */}
       <section className="relative h-[100svh] w-full overflow-hidden">
