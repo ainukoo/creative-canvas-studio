@@ -1,19 +1,16 @@
 import { Link } from "react-router-dom";
-import { Helmet } from "react-helmet-async";
+import { SEO } from "@/components/SEO";
 import portrait from "@/assets/portrait.jpg";
 
 export default function About() {
   return (
     <>
-      <Helmet>
-        <title>About — Ainu Kyrönseppä</title>
-        <meta
-          name="description"
-          content="About Ainu Kyrönseppä — non-binary filmmaker, performer and activist working between film, performance and climate communication."
-        />
-        <meta property="og:title" content="About — Ainu Kyrönseppä" />
-        <meta property="og:description" content="Filmmaker, performer, activist — Helsinki." />
-      </Helmet>
+      <SEO
+        title="About — Ainu Kyrönseppä"
+        description="About Ainu Kyrönseppä — non-binary filmmaker, performer and activist working between film, performance and climate communication."
+        ogTitle="About — Ainu Kyrönseppä"
+        ogDescription="Filmmaker, performer, activist — Helsinki."
+      />
 
       <section className="px-6 md:px-10 pt-32 md:pt-40 pb-16">
         <p className="label-mono text-ember mb-6">Index 03 / Bio</p>
