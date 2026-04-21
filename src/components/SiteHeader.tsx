@@ -1,4 +1,4 @@
-import { Link } from "@tanstack/react-router";
+import { Link, NavLink } from "react-router-dom";
 import { useState } from "react";
 
 const links = [
@@ -22,15 +22,16 @@ export function SiteHeader() {
 
         <nav className="hidden md:flex items-center gap-8">
           {links.map((l) => (
-            <Link
+            <NavLink
               key={l.to}
               to={l.to}
-              className="label-mono text-bone hover:text-amber transition-colors"
-              activeProps={{ className: "label-mono text-amber" }}
-              activeOptions={{ exact: l.to === "/" }}
+              end={l.to === "/"}
+              className={({ isActive }) =>
+                `label-mono transition-colors ${isActive ? "text-amber" : "text-bone hover:text-amber"}`
+              }
             >
               {l.label}
-            </Link>
+            </NavLink>
           ))}
         </nav>
 
@@ -47,16 +48,17 @@ export function SiteHeader() {
         <div className="md:hidden bg-background border-t border-border mix-blend-normal">
           <nav className="flex flex-col px-6 py-6 gap-5">
             {links.map((l) => (
-              <Link
+              <NavLink
                 key={l.to}
                 to={l.to}
+                end={l.to === "/"}
                 onClick={() => setOpen(false)}
-                className="label-mono text-bone hover:text-amber transition-colors"
-                activeProps={{ className: "label-mono text-amber" }}
-                activeOptions={{ exact: l.to === "/" }}
+                className={({ isActive }) =>
+                  `label-mono transition-colors ${isActive ? "text-amber" : "text-bone hover:text-amber"}`
+                }
               >
                 {l.label}
-              </Link>
+              </NavLink>
             ))}
           </nav>
         </div>
