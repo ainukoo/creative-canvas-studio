@@ -1,16 +1,13 @@
-import { Helmet } from "react-helmet-async";
+import { SEO } from "@/components/SEO";
 
 export default function Contact() {
   return (
     <>
-      <Helmet>
-        <title>Contact — Ainu Kyrönseppä</title>
-        <meta
-          name="description"
-          content="Get in touch with Ainu Kyrönseppä for film, photography, editing or collaboration."
-        />
-        <meta property="og:title" content="Contact — Ainu Kyrönseppä" />
-      </Helmet>
+      <SEO
+        title="Contact — Ainu Kyrönseppä"
+        description="Get in touch with Ainu Kyrönseppä for film, photography, editing or collaboration."
+        ogTitle="Contact — Ainu Kyrönseppä"
+      />
 
       <section className="relative min-h-screen px-6 md:px-10 pt-32 md:pt-40 pb-24 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-ember opacity-[0.08] pointer-events-none" />

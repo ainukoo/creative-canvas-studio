@@ -82,18 +82,12 @@ const services: Service[] = [
 export default function Services() {
   return (
     <>
-      <Helmet>
-        <title>Services — Ainu Kyrönseppä</title>
-        <meta
-          name="description"
-          content="Services offered by Ainu Kyrönseppä — event photography, video editing, marketing, scriptwriting, directing and more."
-        />
-        <meta property="og:title" content="Services — Ainu Kyrönseppä" />
-        <meta
-          property="og:description"
-          content="Event photography, video editing, scriptwriting, directing & marketing."
-        />
-      </Helmet>
+      <SEO
+        title="Services — Ainu Kyrönseppä"
+        description="Services offered by Ainu Kyrönseppä — event photography, video editing, marketing, scriptwriting, directing and more."
+        ogTitle="Services — Ainu Kyrönseppä"
+        ogDescription="Event photography, video editing, scriptwriting, directing & marketing."
+      />
 
       <section className="px-6 md:px-10 pt-32 md:pt-40 pb-12 relative">
         <p className="label-mono text-ember mb-6">
